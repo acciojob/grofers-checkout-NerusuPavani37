@@ -6,12 +6,16 @@ const getSum = () => {
 //Add your code here
 	let prices = document.querySelectorAll('.price')
  let totalPrice = 0;
-for(let i=0;i<prices.length;i++){
-  console.log(prices[i].textContent);
-  
-  totalPrice +=Number(prices[i].textContent);
-}
-console.log(totalPrice);
+
+ prices.forEach(price =>{
+   totalPrice += Number(price.textContent)
+ })
+let newRow = document.createElement('tr');
+let newCell = document.createElement('td');
+newCell.innerHTML = totalPrice;
+newRow.appendChild(newCell)
+let table = document.querySelector('table');
+table.appendChild(newRow);
   
 };
 
