@@ -13,6 +13,7 @@ const getSum = () => {
 let newRow = document.createElement('tr');
 let newCell = document.createElement('td');
 newCell.innerHTML = totalPrice;
+	newCell.setAttribute('id' , 'ans')
 newRow.appendChild(newCell)
 let table = document.querySelector('table');
 table.appendChild(newRow);
